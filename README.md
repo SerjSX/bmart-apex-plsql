@@ -2,7 +2,7 @@
 
 Built as a project after my internship at LOGOS, BMart is an Oracle APEX application for a fictional small shop that needs a system usable by both managers and cashiers. It integrates Oracle SQL, PL/SQL packages, and custom CSS.
 
-**Environment:** Oracle APEX 20.1 · Oracle Database 11g
+**Environment:** Oracle APEX 20.1 + Oracle Database 11g
 
 ---
 
