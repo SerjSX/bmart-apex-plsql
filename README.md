@@ -269,13 +269,15 @@ Allows managers to create new cashier accounts by specifying a username and pass
 
 ## Repository Contents
 
-| File | Description |
+| File/Folder | Description |
 |------|-------------|
-| `create_tables.sql` | DDL for all `bmart_` tables and sequences |
-| `data_entry_package_specification.sql` | `data_entry` package spec (DML procedures) |
-| `data_entry_package_body.sql` | `data_entry` package body |
-| `shop_functions_package_specification.sql` | `shop_functions` package spec (analytical functions) |
-| `shop_functions_package_body.sql` | `shop_functions` package body |
+| `sequences` | DDL for all `bmart_` sequences |
+| `tables` | DDL for all `bmart_` tables |
+| `DATA_ENTRY.sql` | `data_entry` package spec (DML procedures) |
+| `DATA_ENTRY.plb` | `data_entry` package body |
+| `SHOP_FUNCTIONS.sql` | `shop_functions` package spec |
+| `SHOP_FUNCTIONS.plb` | `shop_functions` package body |
+| `BMART_AUTH_USER.sql` | `bmart_auth_user` function that is used by APEX to create accounts in custom authentication |
 
 ---
 
