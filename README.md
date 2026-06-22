@@ -36,6 +36,7 @@ These pages will be discussed in detail in the below sections.
 # Pages
 Customers Page
 --
+
 <img width="1920" height="913" alt="image" src="https://github.com/user-attachments/assets/8b63e250-9ca5-424f-900c-e76de3ffe1d1" />
 
 Adding a customer requires the following information: First Name, Last Name, City, Street and Phone Number. The primary key ID for a customer is determined by a sequence created that automatically increments the next value and adds into the INSERT command.
@@ -86,6 +87,7 @@ Additionally, this section has a button called "Finalize Transaction". When the 
 
 All Transactions
 --
+
 <img width="1920" height="916" alt="image" src="https://github.com/user-attachments/assets/8d2ad9fd-7834-4b18-8f0e-4aeb6cad6df7" />
 
 This page allows the manager(s) and cashier(s) to view all of the transactions. Modifying transactions is not possible for accounting purposes.
@@ -111,6 +113,7 @@ The interactive report allows the user to perform some actions on the shown data
 
 All Products
 --
+
 <img width="1920" height="913" alt="image" src="https://github.com/user-attachments/assets/a29f696f-9e09-477f-829f-8942bb88cc10" />
 
 This page allows the manager to view, update, delete and add new products. The cashier can only view the list without being able to modify anything.
@@ -129,9 +132,11 @@ Actions (creating charts, pivot tables...) cannot be performed on this interacti
 [Screencast_20260622_082506.webm](https://github.com/user-attachments/assets/e155122d-2073-4d76-b0da-33afd2379259)
 
 
---
 Product Categories
 --
+
+<img width="1920" height="910" alt="image" src="https://github.com/user-attachments/assets/c452f595-2f89-4fbb-b6e2-94bb0e4cb00f" />
+
 This page allows the manager to view, update, delete, and add a new category to store products in. The cashier can only view them.
 
 The data is displayed in an interactive grid. The following information are displayed:
@@ -139,15 +144,23 @@ The data is displayed in an interactive grid. The following information are disp
     - Title: the title of the category
     - Description: an optional description of the category.
 
-Through the grid, the manager can only update and add a new category. Deleting a category is done through a separate button called "Delete a Category". When the manager clicks on it, a model pops up asking the user to select the category from a dropdown list, and then they have to click a checkbox to be sure that they want to delete the category.
+[Screencast_20260622_112727.webm](https://github.com/user-attachments/assets/806953b6-907f-4bd2-b77f-18c579f23de0)
+
+Through the grid, the manager can only update and add a new category. Deleting a category is done through a separate button called "Delete a Category". When the manager clicks on it, a model pops up asking the user to select the category from a dropdown list, and then they have to click a checkbox to be sure that they want to delete the category.<img width="880" height="356" alt="image" src="https://github.com/user-attachments/assets/0294f70e-9486-4c31-a436-39c87ad172fa" />
+
 
 Notes and business rules:
     - Deleting a category removes all products and their price change history within that category, and then the category itself.
     - Deleting a category is ONLY possible if a product is not in a transaction already. If a product within a category has a transaction associated with it, it cannot be deleted.
 
---
+[Screencast_20260622_112905.webm](https://github.com/user-attachments/assets/9345a7c7-bdf3-4d71-9571-7eda151876fc)
+
+
 Price Change History
 --
+
+<img width="1920" height="909" alt="image" src="https://github.com/user-attachments/assets/cd114706-00f2-4297-875d-b8f96ce9797f" />
+
 This page allows the managers and cashiers to view the price change history of products. It shows:
     - Change Date
     - Title of the product
@@ -159,51 +172,113 @@ The data is displayed in an interactive report and allows a manager/cashier to d
     - Creating charts
     - Saving a filter configuration as a report to come back to whenever needed
     - Downloading the report either as PDF or CSV file
+<img width="706" height="669" alt="image" src="https://github.com/user-attachments/assets/3085a3bb-83a3-4847-94e0-401bc1b183f0" />
 
---
+
 Reports and Analytics Pages
 --
-The report and analytics pages consists of 6 pages:
-    1. Dashboard playground:
-        This page has the following tables in an interactive report format: Customers, Products, Transactions, Transactions and Products (lines), Price Change History.
-        It allows the manager to play around with the data and use the Actions button to do different operations on each table, such as creaitng charts, pivot tables, and filtering the data.
-        Additionally, each page has some charts shown next to the table report:
-            - Customers have a chart showing the numbers of customers per city.
-            - Products have two charts:
-                1. Total Products Per Category
-                1. Value of each category
-                When the user clicks on an item in the chart, it opens a modal that shows the products in the clicked category. This popup modal also allows the manager to add/remove/update products.
+<img width="1920" height="618" alt="image" src="https://github.com/user-attachments/assets/98d50c33-8ad2-49ce-828e-196805356a26" />
 
-            - Transactions shows all of the transasctions done with the full name of the customer. Additionally on the side there is a summary chart that shows the lowest total amount transaction, the highest, and the average of the total amounts. When the user clicks on the minimum/maximum, it opens a modal that shows the products in the transaction that has those values.
+#### 1. Dashboard Playground
+<img width="1920" height="910" alt="image" src="https://github.com/user-attachments/assets/4eca16d1-c3f5-45ee-94e7-722e58cd086f" />
 
-            - Transaction and Products: this table shows all of the transactions along with the products associated to each transaction. It shows the product's full title, the customer's full name, the quantity bought of the product, the total line amount and the total amount of each transaction. Additionally, there are two charts shown on the side:
-                1. The customer's total quantity purchased
-                2. The customer's total amount spent
-                These two show which customers spent the most, or bought the most products by quantity. When the manager clicks on a slice of the pie chart shown, a modal pops up showing the customer's transasctions list and the products in each transaction (as seen in the Customers page).
+An interactive report featuring the following tables with action buttons for creating charts, pivot tables, and filtering data:
 
-            - Price Change History: this table shows each product's change history of their unit price, the full title of the product, the change date, the ID of the product, and the unit price it was changed to. Additionally there's a button called "Find Price of a Product on a Date" that opens a modal, allowing the manager to pick a date and a product to find the price of it (if the product existed at the entered date).
+- **Customers**
+  - Chart: Number of customers per city
+  - Click on chart items to open a modal showing customers in that city
 
-        2. Customer Count in a Given City: allows the manager to pick a city and find out how many clients there are in that city.
+- **Products**
+  - Chart 1: Total Products Per Category
+  - Chart 2: Value of Each Category
+  - Click on chart items to open a modal showing products in that category
+  - Modal allows adding, removing, or updating products
 
-        3. Transaction Count Between Two Dates: allows the manager to specify two dates and find the total number of transactions done.
+- **Transactions**
+  - Displays all transactions with full customer names
+  - Side summary chart showing:
+    - Lowest total amount transaction
+    - Highest total amount transaction
+    - Average of total amounts
+  - Click min/max values to view products in those transactions
 
-        4. Price of a product in a Given Date: allows the mangaer to speify a product and a date to find the price of that product on that date (if the price wasn't changed at the specified date, it takes the earliest one).
+- **Transactions and Products**
+  - Shows all transactions with associated products
+  - Displays: product title, customer name, quantity, line amount, transaction total
+  - Side charts:
+    - Customer's total quantity purchased
+    - Customer's total amount spent
+  - Click pie chart slices to view customer's transactions and products
 
-        5. Total Quantity of a Product Sold Between Two Dates: allows the manager to select a product, a start date and an end date, to find out how many of that product has been sold between those 2 dates.
+- **Price Change History**
+  - Displays: product title, change date, product ID, new unit price
+  - "Find Price of a Product on a Date" button to look up historical pricing
 
-        6. Count of Products Per Transaction: has two parts:
-            - An interactive report showing the transactions, products count of each transaction, a View Products column with a list icon link that shows which products are in that transaction, and a View Customer Info column with a person icon link that shows the client's information associated with that transaction.
-            - Two pie charts: Customer's Total Quantity Purchased and Customer's Total Amount Spent, same as the ones in the dashboard playground.
+[Screencast_20260622_114113.webm](https://github.com/user-attachments/assets/0475b717-9586-4189-9dfe-18d78f8f742b)
 
---
+
+#### 2. Customer Count in a Given City
+<img width="855" height="289" alt="image" src="https://github.com/user-attachments/assets/bd476d18-03f6-4d80-8c9a-1c488f4b9a81" />
+
+Select a city to view the total number of customers located there.
+
+#### 3. Transaction Count Between Two Dates
+<img width="855" height="362" alt="image" src="https://github.com/user-attachments/assets/a32b7b87-c252-4576-91da-6071a73c7738" />
+
+Specify a date range to get the total number of transactions completed.
+
+#### 4. Price of a Product on a Given Date
+<img width="855" height="297" alt="image" src="https://github.com/user-attachments/assets/f303c0b3-749c-4af2-ba57-6f2931cbfeca" />
+
+Select a product and date to retrieve its price on that date (defaults to the earliest price if no change occurred on that exact date).
+
+#### 5. Total Quantity of a Product Sold Between Two Dates
+<img width="845" height="365" alt="image" src="https://github.com/user-attachments/assets/5f46de55-f4cf-4bbb-8f64-b09e05f03ecf" />
+
+Select a product and date range to find the total quantity sold during that period.
+
+#### 6. Count of Products Per Transaction
+<img width="1920" height="902" alt="image" src="https://github.com/user-attachments/assets/8547547a-c360-499f-8575-7172e6cfc3f5" />
+
+
+###### 6.1. Interactive Report:
+- Displays transactions with product count per transaction
+- View Products column with icon link to show items in each transaction
+- View Customer Info column with icon link to display customer details
+
+###### 6.2. Pie Charts:
+- Customer's Total Quantity Purchased
+- Customer's Total Amount Spent
+[Screencast_20260622_114556.webm](https://github.com/user-attachments/assets/f77d32af-f14e-4109-9391-b5af53a840f2)
+
+
 Tools pages
 --
-There are two tools pages:
-    1. Import from Excel: this was done to meet a very specific need and was not generalized later. The shop has an excel file having three columns: product code, product title, and unit price. The manager uploads the file, clicks the import button, and the system attempts to import the data of the products into a pre-defined table in the PL/SQL program. However, any errors that occur is thrown into a temporary collections table to display afterwards to the manager. These errors are considered (but the import does not stop):
-        - The title is empty.
-        - The product code is empty.
-        - The unit price is empty or invalid (< 0).
-        - The product code is already associated with another product in the products table.
+There are **2 tools pages**:
 
-    2. Add a New Cashier: this allows the manager to create a new cashier account by specifying the username and the password.
+##### 1. Import from Excel
 
+Allows managers to import product data from an Excel file with the following workflow:
+
+1. Upload an Excel file containing three columns:
+   - Product code
+   - Product title
+   - Unit price
+
+2. Click the import button
+3. System attempts to import product data into the products table
+4. Any errors are collected and displayed to the manager
+
+**Error Handling:**
+The import continues even when errors occur. Errors are logged for the following conditions:
+
+- Product title is empty
+- Product code is empty
+- Unit price is empty or invalid (negative value)
+- Product code is already associated with another product in the products table
+
+##### 2. Add a New Cashier
+
+Allows managers to create new cashier accounts by specifying:
+- Username
+- Password
