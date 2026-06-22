@@ -1,0 +1,20 @@
+create or replace PACKAGE shop_functions AS
+    FUNCTION get_prod_count_per_tx
+        RETURN SYS_REFCURSOR;
+    FUNCTION get_cust_count_in_given_city
+        (p_city bmart_customers.city%TYPE)
+        RETURN NUMBER;
+    FUNCTION get_trans_count_bet_two_dates
+        (p_start_date VARCHAR2,
+         p_end_date VARCHAR2)
+         RETURN NUMBER;
+    FUNCTION get_prod_price_by_date
+        (p_product_id bmart_products.product_id%TYPE,
+         p_given_date VARCHAR2)
+         RETURN NUMBER;
+    FUNCTION get_prod_qty_between_dates
+        (p_product_id bmart_products.product_id%TYPE,
+         p_start_date VARCHAR2,
+         p_end_date VARCHAR2)
+         RETURN NUMBER;
+END shop_functions;
